@@ -1,0 +1,30 @@
+/* Una hoja de estilos */
+
+body {
+  color: blue;
+  background-color: yellow;
+  font-family: sans-serif;
+  margin: 50px;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: White;
+  background-color: Black;
+  padding: 30px;
+  border: solid Red 5px;
+  margin: 100px;
+}
+
+.chida {
+  font-weight: bold;
+  color: purple;
+}
+
+#clarito {
+  color: LightGray;
+}
+
