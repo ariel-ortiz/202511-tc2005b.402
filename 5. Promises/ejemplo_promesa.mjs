@@ -8,12 +8,22 @@ let miPromesa = new Promise((resolve, reject) => {
         reject('perdiste');
       }
     },
-    num * 1000);
+    1000);
 });
 
-miPromesa
-.then((resultado) => {
-  console.log('Yes: ' + resultado);
-}).catch((err) => {
-  console.error('No: ' + err);
-});
+function main() {
+  console.log('Inicio main');
+  setTimeout(() => console.log('Timer 1'), 200);
+  setTimeout(() => console.log('Timer 2'), 1500);
+  setTimeout(() => console.log('Timer 3'), 100);
+  miPromesa
+    .then((resultado) => {
+      console.log('Yes: ' + resultado);
+    })
+    .catch((err) => {
+      console.error('No: ' + err);
+    });
+  console.log('Fin main');
+}
+
+main();
