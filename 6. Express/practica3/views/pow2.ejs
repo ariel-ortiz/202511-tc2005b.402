@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pow 2 Example</title>
+  </head>
+  <body>
+    <h1>Pow 2</h1>
+    <p>
+      <ul><% for (const val of resultadoPow2) { %>
+        <li><%= val %></li><% } %>
+      </ul>
+    </p>
+    <% if (enanos.length % 2 === 1) { %>
+      <h2>Lista de enanos</h2>
+      <ol type="i">
+        <% for (const enano of enanos) { %>
+          <li><%= enano %></li>
+        <% } %>
+      </ol>
+    <% } else { %>
+      <p>
+        No hay enanos que ver.
+      </p>
+    <% } %>
+  </body>
+</html>
