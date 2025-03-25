@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Quotations Database</title>
+  </head>
+  <body>
+    <h1>The Quotations Database</h1>
+    <ul>
+      <% for (const row of rows) { %>
+        <li>
+          <%= row.id %>,
+          <%= row.author %>,
+          <%= row.excerpt %>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
