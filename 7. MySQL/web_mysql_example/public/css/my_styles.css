@@ -1,0 +1,7 @@
+.centered-table {
+  width: 800px;
+  margin: 0 auto;
+}
+.centered-table tbody tr:hover {
+  cursor: pointer;
+}
