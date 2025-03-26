@@ -5,14 +5,19 @@
   </head>
   <body>
     <h1>The Quotations Database</h1>
-    <ul>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Authot</th>
+        <th>Excerpt</th>
+      </tr>
       <% for (const row of rows) { %>
-        <li>
-          <%= row.id %>,
-          <%= row.author %>,
-          <%= row.excerpt %>
-        </li>
+        <tr>
+          <td><%= row.id %></td>
+          <td><%= row.author %></td>
+          <td><%= row.excerpt %></td>
+        </tr>
       <% } %>
-    </ul>
+    </table>
   </body>
 </html>
