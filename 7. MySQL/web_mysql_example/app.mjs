@@ -17,18 +17,22 @@ app.get('/db', async (req, res) => {
       password: process.env.MYSQL_PASSWORD,
       database: 'web_database'
     });
-    
+
     const [rows] = await connection.execute('SELECT * FROM quotations');
     res.render('db', { rows });
-    
+
   } catch (err) {
     res.status(500).send('Error al acceder la base datos');
-    
+
   } finally {
     if (connection) {
       await connection.end();
     }
   }
+});
+
+app.post('/process_form', (req, res) => {
+  res.send('¡Ya hice el post!');
 });
 
 // Página de recurso no encontrado (estatus 404)
