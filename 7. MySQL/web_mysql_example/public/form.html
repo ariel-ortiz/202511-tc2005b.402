@@ -2,25 +2,35 @@
 <html>
   <head>
     <title>Form Example</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      form {
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
   </head>
-  <body>
-    <h1>Form Example</h1>
-    <form method="POST" action="/process_form">
-      <p>
-        <label for="id_author">Author:</label>
-        <br>
-        <input id="id_author" required type="text">
-      </p>
-      <p>
-        <label for="id_excerpt">Excerpt:</label>
-        <br>
-        <textarea id="id_excerpt" required>
+  <body class="w3-container">
 
-        </textarea>
-      </p>
+    <h1 class="w3-center">Form Example</h1>
+
+    <form class="w3-container w3-card-4" method="POST" action="/process_form">
+
       <p>
-        <input type="submit" value="Púshale">
+        <label class="w3-text-blue" for="id_author">Author:</label>
+        <input class="w3-input w3-border" id="id_author" name="author" required type="text">
       </p>
+
+      <p>
+        <label class="w3-text-blue" for="id_excerpt">Excerpt:</label>
+        <textarea class="w3-input w3-border" id="id_excerpt" name="excerpt" required></textarea>
+      </p>
+
+      <p>
+        <input class="w3-button w3-blue" type="submit" value="Púshale">
+      </p>
+
     </form>
+
   </body>
 </html>

@@ -7,6 +7,7 @@ const ipAddress = process.env.C9_HOSTNAME ?? 'localhost';
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/db', async (req, res) => {
   let connection;
@@ -32,6 +33,12 @@ app.get('/db', async (req, res) => {
 });
 
 app.post('/process_form', (req, res) => {
+  let { author, excerpt } = req.body;
+  author = author.trim() || 'Unknown';
+  excerpt = excerpt.trim() || 'No information';
+  console.log(author);
+  console.log(excerpt);
+
   res.send('¡Ya hice el post!');
 });
 
